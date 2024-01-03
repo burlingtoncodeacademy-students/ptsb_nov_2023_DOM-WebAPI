@@ -11,7 +11,11 @@ incButton.addEventListener("click", () => {
   countText.textContent = num;
 });
 
-decButton.addEventListener("click", () => {
-  num--;
-  countText.textContent = num;
-});
+decButton.addEventListener(
+  "click",
+  () => {
+    num--;
+    countText.textContent = num;
+  }
+  // { once: true } // Allows event to only fire once
+);
