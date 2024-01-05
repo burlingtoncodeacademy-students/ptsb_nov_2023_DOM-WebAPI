@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do App</title>
+
+    <!-- Loading Fonts from Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad&family=Grandstander:wght@300&family=Libre+Franklin:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Loading in our css file -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Loading our javascript file, type=module assists with import/export. Defer allows the script to execute after the html -->
+    <script src="./index.js" defer type="module"></script>
+  </head>
+  <body>
+    <!-- Do basic DOM manipulation -->
+    <section id="todo-container">
+      <h2 id="todo-heading">To Do List</h2>
+      <div>
+        <form id="todo-form">
+          <input
+            placeholder="Insert todo here!"
+            type="text"
+            id="todo-add_text"
+            name="todo"
+          />
+          <select name="emoji" id="emoji-selector"></select>
+          <button type="submit" id="todo-add_button">➕</button>
+        </form>
+      </div>
+
+      <ul id="todos">
+        <li class="todo">
+          <p class="emoji"></p>
+          <p class="todo-text"></p>
+          <button class="todo-delete">❌</button>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
