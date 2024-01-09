@@ -21,7 +21,7 @@ todoEmojis.forEach((i) => {
 
 todoForm.addEventListener("submit", (e) => {
   //   Prevent default refresh of the page, ex. clicking submit on a form
-  e.preventDefault();
+  //   e.preventDefault();
 
   if (todosInputField.value.length === 0) {
     alert("Please provide a todo!");
@@ -36,7 +36,7 @@ todoForm.addEventListener("submit", (e) => {
 
     newArr.reverse().push(formData);
     createTodos(newArr.reverse());
-    todoForm.reset();
+    // todoForm.reset();
     todoForm[0].focus();
   }
 });
