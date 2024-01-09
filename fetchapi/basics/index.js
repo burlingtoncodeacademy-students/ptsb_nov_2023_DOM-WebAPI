@@ -18,7 +18,7 @@
 
 const testEndpoint = "https://jsonplaceholder.typicode.com/posts/1";
 
-// console.log(fetch(testEndpoint));
+console.log(fetch(testEndpoint));
 
 // fetch("https://jsonplaceholder.typicode.com/posts/1");
 // fetch(testEndpoint)
