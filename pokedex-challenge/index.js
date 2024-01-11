@@ -1,7 +1,7 @@
 /*
 ?   Challenge:
-        - Grab a hold of the HTML elements that are necessary - ✅
-        - Use the https://pokeapi.co/ to retrieve the information of a pokemon ✅
+        - Grab a hold of the HTML elements that are necessary 
+        - Use the https://pokeapi.co/ to retrieve the information of a pokemon 
         - Then using the input field, a user should be able to type in the pokemon name or number.
 
         *HINT There is a method you can use to grab a hold of the value contained within the input field
@@ -41,6 +41,14 @@ const displayPokemon = (pokemonObj) => {
   pokeName.textContent = pokemonObj.name;
   pokeImg.src = pokemonObj.img;
 
+  while (pokeStats.firstChild) {
+    pokeStats.removeChild(pokeStats.firstChild);
+  }
+
+  while (pokeMoves.firstChild) {
+    pokeMoves.removeChild(pokeMoves.firstChild);
+  }
+
   pokemonObj.stats.forEach((i) => {
     let statName = document.createElement("p");
     statName.textContent = i.stat.name + " " + i.base_stat;
@@ -52,7 +60,6 @@ const displayPokemon = (pokemonObj) => {
     moveName.textContent = i.move.name;
     pokeMoves.appendChild(moveName);
   });
-  // json.moves
 };
 
 const getPokemon = async (pokemon) => {
